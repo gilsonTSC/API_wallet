@@ -20,7 +20,7 @@ import com.wallet.entity.User;
 @SpringBootTest
 public class UserRepositoryTest {
 
-	private static final String EMAIL = "email@tests.com";
+	private static final String EMAIL = "email@teste.com";
 	@Autowired
 	UserRepository repository;
 	
