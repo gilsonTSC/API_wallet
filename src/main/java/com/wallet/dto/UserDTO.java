@@ -5,9 +5,12 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Data;
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL) //SÓ ADICIONAR VALORES NÃO NULOS.
 public class UserDTO {
 
 	private Long id;
