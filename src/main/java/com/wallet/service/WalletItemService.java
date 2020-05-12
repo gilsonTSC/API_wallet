@@ -19,5 +19,7 @@ WalletItem save(WalletItem i);
 	List<WalletItem> findByWalletAndType(Long wallet, TypeEnum type);
 	
 	BigDecimal sumByWalletId(Long wallet);
+
+	Object findById(Long id);
 	
 }

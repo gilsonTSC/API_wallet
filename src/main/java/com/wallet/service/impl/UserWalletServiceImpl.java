@@ -17,5 +17,10 @@ public class UserWalletServiceImpl implements UserWalletService{
 	public UserWallet save(UserWallet uw) {
 		return this.repository.save(uw);
 	}
+
+	@Override
+	public Object findByUsersIdAndWalletId(Long user, Long wallet) {
+		return repository.findByUsersIdAndWalletId(user, wallet);
+	}
 	
 }

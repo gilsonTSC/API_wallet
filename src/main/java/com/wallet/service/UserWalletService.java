@@ -5,5 +5,7 @@ import com.wallet.entity.UserWallet;
 public interface UserWalletService {
 
 	UserWallet save(UserWallet uw);
+
+	Object findByUsersIdAndWalletId(Long user, Long wallet);
 	
 }

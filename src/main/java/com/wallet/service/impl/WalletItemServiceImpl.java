@@ -52,4 +52,9 @@ public class WalletItemServiceImpl implements WalletItemService{
 		return repository.sumByWalletId(wallet);
 	}
 
+	@Override
+	public Object findById(Long id) {
+		return repository.findById(id);
+	}
+
 }
