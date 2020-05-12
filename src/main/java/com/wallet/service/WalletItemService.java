@@ -20,6 +20,8 @@ WalletItem save(WalletItem i);
 	
 	BigDecimal sumByWalletId(Long wallet);
 
-	Object findById(Long id);
+	Optional<WalletItem> findById(Long id);
+	
+	void deleteById(Long id);
 	
 }
