@@ -20,11 +20,11 @@ public class JwtTokenUtil {
 	static final String CLAIM_KEY_AUDIENCE = "audience";
 	static final String CLAIM_KEY_CREATED = "created";
 
-	@Value("${jwt.secret}")
-	private String secret;
+	//@Value("${jwt.secret}")
+	private String secret = "_(120@#$3t09138uioajsdU2B1Rjs32";
 
-	@Value("${jwt.expiration}")
-	private Long expiration;
+	//@Value("${jwt.expiration}")
+	private Long expiration= 600L;
 
 
 	public String getUsernameFromToken(String token) {
