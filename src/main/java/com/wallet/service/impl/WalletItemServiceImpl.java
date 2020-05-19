@@ -28,7 +28,7 @@ public class WalletItemServiceImpl implements WalletItemService{
 	//private int itemsPerPage;
 	
 	@Override
-	@CacheEvict(value = "findByWalletAndType", allEntries = true)
+	@CacheEvict(value = "findByWalletAndType", allEntries = true) 
 	public WalletItem save(WalletItem i) {
 		return repository.save(i);
 	}
@@ -43,7 +43,7 @@ public class WalletItemServiceImpl implements WalletItemService{
 	}
 
 	@Override
-	@Cacheable(value = "findByWalletAndType")
+	@Cacheable(value = "findByWalletAndType") 
 	public List<WalletItem> findByWalletAndType(Long wallet, TypeEnum type) {
 		return repository.findByWalletIdAndType(wallet, type);
 	}
@@ -60,6 +60,7 @@ public class WalletItemServiceImpl implements WalletItemService{
 	}
 
 	@Override
+	@CacheEvict(value = "findByWalletAndType", allEntries = true)
 	public void deleteById(Long id) {
 		this.repository.deleteById(id);
 	}
