@@ -2,6 +2,7 @@ package com.wallet.dto;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -24,5 +25,9 @@ public class UserDTO {
 	@NotNull
 	@Length(min=6, message="A senha deve conter no minimo 6 caracteres")
 	private String password;
+	
+	@NotNull(message = "Informe uma role de acesso")
+	@Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$", message = "Para A ROLE DE ACESSO somente são aceitos os valores ROLE_ADMIN ou ROLE_USER")
+	private String role;
 	
 }
