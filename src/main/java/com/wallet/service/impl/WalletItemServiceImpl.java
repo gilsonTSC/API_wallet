@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.wallet.entity.WalletItem;
@@ -36,8 +36,7 @@ public class WalletItemServiceImpl implements WalletItemService{
 	@Override
 	public Page<WalletItem> findBetweenDates(Long wallet, Date start, Date end, int page) {
 		
-		@SuppressWarnings("deprecation")
-		PageRequest pg = new PageRequest(page, 10);//itemsPerPage);
+		Pageable pg = PageRequest.of(page, 10);//itemsPerPage);
 		
 		return repository.findAllByWalletIdAndDateGreaterThanEqualAndDateLessThanEqual(wallet, start, end, pg);
 	}
