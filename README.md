@@ -1,8 +1,20 @@
-# API RESTfull com Spring Boot
+[![Build Status](https://travis-ci.com/github/gilsonTSC/api_wallet.svg?branch=master)](https://travis-ci.com/github/gilsonTSC/api_wallet)
 
-Aplicando o desenvolvimento orientado a teste o TDD, usando o Junit e Mockito para os testes além do postman para os testes na api.
-Utilizando os recursos do lombok para a criação automatizada dos get's e set's. 
-Usando o Travis CI e Travis CD para a integração contínua e os deploy's automatizados.
+# Wallet API RESTfull
 
-Recursos utilizados:
-Spring boot, Hibernate/JPA, lombok, TDD, Junit e Mockito, PostgreSQL, Tokens JWT, Swagger, Flyway, ehcache e spring security.
+Projeto de uma *API RESTfull com Spring Boot utilizando TDD, CI e CD*, a principal funcionalidade da API é permitir o cadastro de usuários 
+para manipular de maneira individual uma carteira, inserindo, alterando, removendo ou adicionado itens.
+
+## Detalhes do projeto
+*Esse projeto possui as seguintes características:*
+
+* Projeto criado com Spring Boot e Java 8
+* Banco de dados Postgres com JPA e Spring Data JPA
+* Versionamento de banco de dados com Flyway
+* Testes com JUnit e Mockito com banco H2 em memória
+* Caching com EhCache
+* Nuvem do Heroku
+* Integração contínua com TravisCI
+* Project Lombok
+* Documentação dos endpoints com Swagger
+* Segurança da API com autenticação via tokens JWT 
